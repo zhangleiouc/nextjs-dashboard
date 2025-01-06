@@ -1,13 +1,18 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { useSearchParams } from 'next/navigation';
+
 
 export default function Search({ placeholder }: { placeholder: string }) {
+    const searchParams = useSearchParams();
+
     function handleSearch(term: string) {
         console.log(term);
     }
 
     return (
+
         <div className="relative flex flex-1 flex-shrink-0">
             <label htmlFor="search" className="sr-only">
                 Search
